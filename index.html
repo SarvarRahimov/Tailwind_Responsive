@@ -10,46 +10,69 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="md:bg-gray-50 lg:bg-white">
     <header>
-      <div class="flex justify-between items-center mt-6">
-        <div class="flex items-center ml-8">
-          <div class="pr-12">
-            <img src="/img/Group 26295.png" alt="logo" />
-          </div>
-          <div>
-            <ul class="list-none flex pb-5">
-              <li class="pr-7">
-                <a href="#" class="text-lg text-normal text-indigo-900"
-                  >My Orders</a
-                >
-              </li>
-              <li class="pr-7">
-                <a href="#" class="text-lg text-normal text-gray-900"
-                  >Services</a
-                >
-              </li>
-              <li class="pr-7">
-                <a href="#" class="text-lg text-normal text-gray-900">Help</a>
-              </li>
-            </ul>
-          </div>
+      <div
+        class="flex items-center lg:justify-start lg:drop-shadow-none md:justify-between md:bg-white md:drop-shadow-lg lg:mt-6 pl-8"
+      >
+        <!-- <div class="flex items-center ml-8 "> -->
+        <div class="lg:pr-12 md:pt-4 md:order-2 lg:order-1 cursor-pointer">
+          <img src="/img/Group 26295.png" alt="logo" />
         </div>
-        <div class="mr-12 pb-5">
-          <i class="fa-regular fa-magnifying-glass mr-8"></i>
+        <div class="md:order-1 lg:order-2 lg:block md:hidden ">
+          <ul class="lg:list-none lg:flex   md:bg-white ">
+            <li class="pr-7">
+              <a href="#" class="text-lg text-normal text-indigo-900"
+                >My Orders</a
+              >
+            </li>
+            <li class="pr-7">
+              <a href="#" class="text-lg text-normal text-gray-900">Services</a>
+            </li>
+            <li class="pr-7">
+              <a href="#" class="text-lg text-normal text-gray-900">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:hidden md:text-3xl cursor-pointer" id="menu_bar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- </div> -->
+        <div
+          class="mr-12 pb-5 md:order-3 md:hidden lg:block lg:order-3 lg:absolute lg:right-0"
+        >
+          <i class="fa-solid fa-magnifying-glass mr-8 text-xl cursor-pointer"></i>
           <button class="mr-8 text-base text-normal text-gray-900">
             Sign in
           </button>
           <button class="w-32 rounded-sm bg-purple-700 py-3">
-            <i class="fa-regular fa-lock-keyhole text-white"></i
-            ><span class="text-white text-base text-normal text-gray-900"
+            <i class="fa-solid fa-lock text-white mr-2"></i>
+            <span class="text-white text-base text-normal text-gray-900"
               >Sign up</span
             >
           </button>
         </div>
+        <div class="lg:hidden md:order-3 md:mr-10 md:w-10 md:h-10">
+          <img src="img/Oval.png" alt="" />
+        </div>
+      </header>
+      <div class=" hidden lg:hidden md:w-1/4  transition-all ease-in-out duration-3000 transform" id="nav_list">
+        <ul class="md:pl-10 pt-5 pb-5 md:bg-white ">
+          <li class="">
+            <a href="#" class="text-lg text-normal text-indigo-900"
+              >My Orders</a
+            >
+          </li>
+          <li class="pt-2">
+            <a href="#" class="text-lg text-normal text-gray-900">Services</a>
+          </li>
+          <li class="pt-2">
+            <a href="#" class="text-lg text-normal text-gray-900">Help</a>
+          </li>
+        </ul>
       </div>
-    </header>
-    <div class="mt-4 relative w-full h-48">
+    </div>
+    <div class="mt-4 relative w-full h-48 lg:block md:hidden">
       <img
         src="img/head bg.png"
         alt="head_photo"
@@ -59,174 +82,307 @@
         <h2 class="text-3xl font-semibold pl-24">Find your best</h2>
       </div>
     </div>
-    <main >
-        <div
-          class=" relative bottom-12 grid grid-cols-3 place-items-center gap-y-24 px-24  "
-        > 
-          <div class="w-96">
-            <img src="img/Group 16.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
-              Gather all your cleaning tools
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
+    <div class="lg:hidden md:block md:mt-20 md:pl-10">
+      <div class="flex ">
+        <img src="img/image 1044.png" alt="" class="md:w-5 md:h:5 mr-2" ><span class="text-normal text-base text-gray-900">All Services</span></div>
+      <div><h2 class="text-3xl font-semibold  mt-3">Find your best</h2></div>
+      <div class=" mt-3 mb-4 w-1/2">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. When an unknown printer.
+        </p>
+      </div>
+    </div>
+    <main>
+      <div
+        class="relative lg:bottom-12 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-items-center gap-y-24 lg:px-24"
+      >
+        <div class="w-96 ">
+          <div class=" md:flex md:justify-center md:items-center lg:block relative" id="container1">
+            <img src="img/Rectangle 14.png" alt="" class="md:h-40 md:w-full lg:h-full object-cover " />
+            <div class="bg-white rounded-lg absolute lg:top-44  ml-7 pr-20 pl-5 py-3 ">
+              <h2 class="text-normal text-xl text-gray-900 cursor-pointer">Babysitter</h2>
+              <div class="flex mt-2">
+                <img src="img/image 1019.png" alt="" class="pr-2">
+                <p class=" text-normal text-gray-500 cursor-pointer">Starts from 10$/h</p>
+              </div>
+            </div>
           </div>
-          <div class="w-96">
-            <img src="img/Group 17.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
+          <div class="lg:max-h-full lg:overflow-visible md:overflow-hidden md:max-h-0 " id="about_container1">
+            <p
+              class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+            >
               Gather all your cleaning tools
             </p>
             <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Clear the clutter
+            </p>
             <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
               Focus on tubs, sinks and toilets
             </p>
             <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
               Focus on tubs, sinks and toilets
             </p>
             <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
-          </div>
-          <div class="w-96">
-            <img src="img/Group 18.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
-              Gather all your cleaning tools
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Sweep, then mop
             </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
-          </div>
-          <div class="w-96">
-            <img src="img/Group 22.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
-              Gather all your cleaning tools
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
-          </div>
-          <div class="w-96">
-            <img src="img/Group 23.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
-              Gather all your cleaning tools
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
-          </div>
-          <div class="w-96">
-            <img src="img/Group 19.png" alt="" class="" />
-            <p class="text-base text-normal text-gray-900 pl-4 pt-4">
-              Gather all your cleaning tools
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Clear the clutter</p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">
-              Focus on tubs, sinks and toilets
-            </p>
-            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
-            <p class="text-base text-normal text-gray-900 pl-4">Sweep, then mop</p>
           </div>
         </div>
-      </main>
-      <footer>
-        <div class="mt-52">
-          <img src="img/Frame 2.png" alt="">
+        <div class="w-96 ">
+          <div class="relative  md:flex md:justify-center md:items-center ">
+
+            <img src="img/Rectangle 16.png" alt="" class="md:h-40 md:w-full lg:h-full object-cover " />
+            <div class="bg-white rounded-lg absolute lg:top-44 ml-7 pr-20 pl-5 py-3" >
+              <h2 class="text-normal text-xl text-gray-900 cursor-pointer">Beauty</h2>
+              <div class="flex mt-2">
+                <img src="img/image 1019.png" alt="" class="pr-2">
+                <p class=" text-normal text-gray-500 cursor-pointer">Starts from 25$/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:max-h-full lg:overflow-visible md:overflow-hidden md:max-h-0 ">
+
+            <p
+              class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+            >
+              Gather all your cleaning tools
+            </p>
+            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Clear the clutter
+            </p>
+            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Focus on tubs, sinks and toilets
+            </p>
+            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Focus on tubs, sinks and toilets
+            </p>
+            <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+            <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+              Sweep, then mop
+            </p>
+          </div>
+        </div>
+        <div class="w-96 ">
+          <div class="relative">
+
+            <img src="img/Rectangle 18.png" alt="" class="" />
+            <div class="bg-white rounded-lg absolute top-44 ml-7 pr-20 pl-5 py-3">
+              <h2 class="text-normal text-xl text-gray-900 cursor-pointer" >Cleaning</h2>
+              <div class="flex mt-2">
+                <img src="img/image 1019.png" alt="" class="pr-2">
+                <p class=" text-normal text-gray-500 cursor-pointer">Starts from 11$/h</p>
+              </div>
+            </div>
+          </div>
+          
+          <p
+            class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+          >
+            Gather all your cleaning tools
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Clear the clutter
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Sweep, then mop
+          </p>
+        </div>
+        <div class="w-96 relative">
+          <img src="img/Rectangle 20.png" alt="" />
+          <div class="bg-white rounded-lg absolute top-44 ml-7 pr-20 pl-5 py-3">
+            <h2 class="text-normal text-xl text-gray-900 cursor-pointer">Home Repair</h2>
+            <div class="flex mt-2">
+              <img src="img/image 1019.png" alt="" class="pr-2">
+              <p class=" text-normal text-gray-500 cursor-pointer">Starts from 26$/h</p>
+            </div>
+          </div>
+          <p
+            class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+          >
+            Gather all your cleaning tools
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Clear the clutter
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Sweep, then mop
+          </p>
+        </div>
+        <div class="w-96 relative">
+          <img src="img/Rectangle 21.png" alt="">
+          <div class="bg-white rounded-lg absolute top-44 ml-7 pr-20 pl-5 py-3">
+            <h2 class="text-normal text-xl text-gray-900 cursor-pointer">Other Services</h2>
+            <div class="flex mt-2">
+              <img src="img/image 1019.png" alt="" class="pr-2">
+              <p class=" text-normal text-gray-500 cursor-pointer">Starts from 14$/h</p>
+            </div>
+          </div>
+          <p
+            class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+          >
+            Gather all your cleaning tools
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Clear the clutter
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Sweep, then mop
+          </p>
+        </div>
+        <div class="w-96 relative">
+          <img src="img/Rectangle 22.png" alt="" class="" />
+          <div class="bg-white rounded-lg absolute top-44 ml-7 pr-20 pl-5 py-3">
+            <h2 class="text-normal text-xl text-gray-900 cursor-pointer">Special Care</h2>
+            <div class="flex mt-2">
+              <img src="img/image 1019.png" alt="" class="pr-2">
+              <p class=" text-normal text-gray-500 cursor-pointer">Starts from 10$/h</p>
+            </div>
+          </div>
+          <p
+            class="text-base text-normal text-gray-900 pl-4 cursor-pointer pt-4"
+          >
+            Gather all your cleaning tools
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Clear the clutter
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Focus on tubs, sinks and toilets
+          </p>
+          <div class="h-px bg-gray-900 my-4 opacity-25"></div>
+          <p class="text-base text-normal text-gray-900 pl-4 cursor-pointer">
+            Sweep, then mop
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="mt-52">
+        <img src="img/Frame 2.png" alt="" />
         <div class="flex justify-around items-start my-9">
-          <div class="flex flex-col p-7 bg-gray-50  w-30 ">
-            <img src="img/Group 15.png" alt="logo" class="w-16 h-16">
-            <p class="text-normal text-base pr-8 w-56">izzi is the major platform in Azerbaijan to request help from taskers</p>
+          <div class="flex flex-col p-7 bg-gray-50 w-30">
+            <img src="img/Group 15.png" alt="logo" class="w-16 h-16" />
+            <p class="text-normal text-base pr-8 w-56">
+              izzi is the major platform in Azerbaijan to request help from
+              taskers
+            </p>
           </div>
           <div>
             <ul>
               <li class="text-normal mt-7 text-base">izzi Ltd.</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">Location adres</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">info@izzi.com</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">+994 (50) XX XXXX</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">NR21465161</li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 ">
+                Location adres
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 ">
+                info@izzi.com
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 ">
+                +994 (50) XX XXXX
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 ">
+                NR21465161
+              </li>
             </ul>
           </div>
           <div>
             <ul>
               <li class="text-normal mt-7 text-base">Book a service</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">Browse Services</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">Find Taskers</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75">How does it work?</li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                Browse Services
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                Find Taskers
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                How does it work?
+              </li>
             </ul>
           </div>
           <div>
             <ul>
               <li class="text-normal mt-7 text-base">Extra links</li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75"><a href="#">About us</a></li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75"><a href="#">FAQ</a></li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75"><a href="#">Contact us</a></li>
-              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75"><a href="#">Become a Task</a></li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                <a href="#">About us</a>
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                <a href="#">FAQ</a>
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                <a href="#">Contact us</a>
+              </li>
+              <li class="text-sm text-normal mt-5 text-gray-900 opacity-75 cursor-pointer">
+                <a href="#">Become a Task</a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="my-10">
-          <div class="h-px bg-gray-900 my-4 opacity-15 "></div>
+          <div class="h-px bg-gray-900 my-4 opacity-15"></div>
           <div class="flex justify-around mt-10">
-
             <div class="flex items-center">
-              <img src="img/Vector.png" alt="" class="w-5 h-5 mr-10">
-              <img src="img/Vector (1).png" alt="" class="w-5 h-4 mr-10">
-              <img src="img/Vector (2).png" alt="" class="w-5 h-5 mr-10">
-              <img src="img/Vector (3).png" alt="" class="w-5 h-4 mr-10">
+              <i class="fa-brands fa-facebook text-2xl mr-10 text-gray-600 cursor-pointer"></i>
+              <i class="fa-brands fa-twitter text-2xl mr-10 text-gray-600 cursor-pointer"></i>
+              <i class="fa-brands fa-instagram text-2xl mr-10 text-gray-600 cursor-pointer"></i>
+              <i class="fa-brands fa-youtube text-2xl mr-10 text-gray-600 cursor-pointer"></i>
             </div>
             <div class="flex items-center">
-              <p class="text-sm text-normal mr-8 text-gray-900 ">izzi Ltd. 2021</p>
-              <p class="text-sm text-normal mr-8 text-gray-900 ">Privacy Policy</p>
-              <p class="text-sm text-normal mr-8 text-gray-900 ">Terms and conditions</p>
+              <p class="text-sm text-normal mr-8 text-gray-900">
+                izzi Ltd. 2021
+              </p>
+              <p class="text-sm text-normal mr-8 text-gray-900">
+                Privacy Policy
+              </p>
+              <p class="text-sm text-normal mr-8 text-gray-900">
+                Terms and conditions
+              </p>
             </div>
           </div>
-          
         </div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
